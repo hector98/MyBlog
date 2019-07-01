@@ -9,5 +9,10 @@ Rails.application.routes.draw do
   post "articles", to: "articles#create"
 
 #Ruta para ir a la consulta "se utiliza un tipo comidin este se delcara con : y luego el nombre"
+#localhost:3000/articles/show
   get "articles/:id", to: "articles#show"
+
+#Ruta para ir a la edicion de un articulo localhost:3000/articles/edit
+  patch "articles/:id", to: "articles#update", as: :article
+  get "articles/:id/edit", to: "articles#edit"
 end
